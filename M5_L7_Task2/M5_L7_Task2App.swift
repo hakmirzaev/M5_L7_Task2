@@ -13,8 +13,9 @@ struct M5_L7_Task2App: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StarterScreen()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(Status())
         }
     }
 }
